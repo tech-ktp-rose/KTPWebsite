@@ -1,0 +1,29 @@
+li#banner {
+    width: 100%;
+    background-color: black;
+    color: aqua;
+    font-size: 100px;
+    text-align: center;
+    list-style: none;
+}
+
+body {
+    margin: 0;
+    background-color: grey;
+    border-left: 50px solid rgb(68, 68, 68);
+    border-right: 50px solid rgb(68, 68, 68);
+}
+
+figure{
+    text-align: center;
+}
+
+h2 {
+    color: aqua;
+    padding: 10px;
+}
+
+p {
+    color: white;
+    padding: 20px;
+}
