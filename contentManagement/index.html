@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home page - CMS</title>
+        <link href="css/index.css" type="text/css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div>
+            <h3>Page Title:</h3>
+            <form id="pageTitle" class="forms">
+                <input type="text" name="pagetitle" value="">
+                <input type="submit">
+            </form>
+
+            <h3>Add a Photo:</h3>
+            <form id="addPhoto" class="forms">
+                Title: <br>
+                <input type="text" name="title" value=""><br>
+                Caption: <br>
+                <input type="text" name="caption" value=""> <br>
+                Image: <br>
+                <input type="file" name="pic" accept="image/*"> <br>
+                <input type="submit">
+            </form>
+
+            <h3>Edit Photos:</h3>
+            <div id="currentPhotos" class="forms">
+            </div>
+
+            <h3>Greeting Text:</h3>
+            <form id="greetingText" class="forms">
+                <input type="text" name="greetingtext" value="">
+                <input type="submit">
+            </form>    
+
+
+            <h3>Add an Event:</h3>
+            <form id="addEvent" class="forms">
+                Name: <br>
+                <input type="text" name="name" value=""><br>
+                Description: <br>
+                <input type="text" name="description" value=""> <br>
+                Date: <br>
+                <input type="date" name="date"> <br>
+                <input type="submit">
+            </form>
+
+            <h3>Edit Events:</h3>
+            <div id="currentEvents" class="forms">
+            </div>
+        </div>  
+    </body>
+</html>
