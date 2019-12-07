@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 
 const textFieldRoutes = require('./routes/textFields');
 const EventEntryRoutes = require('./routes/eventEntries');
+const photoCarouselEntryRoutes = require('./routes/photoCarouselEntries');
 
 //instantiate instance of express webserver
 const app = express();
@@ -44,6 +45,7 @@ app.get('/', (req, res) => {
 // Route traffic sent to /contacts to the mini app
 app.use('/textfields', textFieldRoutes);
 app.use('/eventEntries', EventEntryRoutes);
+app.use('/photoCarouselEntries', photoCarouselEntryRoutes);
 
 
 app.listen(port, () => {

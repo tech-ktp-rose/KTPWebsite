@@ -29,6 +29,30 @@
         return false;
     });
 
+    $('#newPhotoSubmit').on('click', function () {
+        const title = $("#newPhotoTitle").val();
+        const text = $("#newEventLocation").val();
+        const photo = $("#newPhoto").prop('files')[0];
+        var fd = new FormData();
+        fd.append('title', title)
+        fd.append('text', text);
+        fd.append('photo', photo);
+        $.ajax({
+            url: dataBaseURL + "photoCarouselEntries",
+            type: 'post',
+            contentType: false,
+            processData: false,
+            async: false,
+            data: fd,
+            success: (textField) => {
+                console.log("Success");
+            },
+            error: (req, status, err) => {
+                console.log("Failure");
+            }
+        });
+    });
+
     $.ajax({
         url: dataBaseURL + "textFields/" + "greetingText",
         type: 'get',
