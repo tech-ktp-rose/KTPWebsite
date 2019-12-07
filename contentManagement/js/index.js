@@ -88,8 +88,6 @@
         async: false,
         success: (events) => {
             if (events) {
-                console.log("Got events");
-                console.log(events);
                 $.each(events, addEvents);
             } else {
                 console.log("no events found")

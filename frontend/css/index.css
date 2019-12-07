@@ -8,14 +8,8 @@ p {
     padding: 20px;
 }
 
-#homepageContents {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#slackAnnouncements, #upcomingEvents {
-    width: 40%;
+#upcomingEvents {
+    width: 70%;
     border: white 5px solid;
     margin: 5%;
     height: 200px;
