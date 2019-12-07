@@ -57,14 +57,14 @@
         return false;
     });
 
-    $('#greetingTextSubmit').on('click', function () {
+    $('#newEventSubmit').on('click', function () {
         const eventName = $("#newEventName").val();
         const eventLocation = $("#newEventLocation").val();
         const eventDescription = $("#newEventDescription").val();
         const eventDate = $("#newEventDate").val();
         $.ajax({
-            url: dataBaseURL + "textFields/" + "greetingText",
-            type: 'put',
+            url: dataBaseURL + "eventEntries",
+            type: 'post',
             dataType: "JSON",
             async: false,
             data: {

@@ -29,6 +29,24 @@ router.route('/').get((req,res) => {
             res.status(200);
         }
     });
+})
+.post((req, res) => {
+    EventEntry.create({
+        name: req.body.name,
+        description: req.body.description,
+        location: req.body.location,
+        date: new Date(req.body.date)
+    }, (err, eventEntry) => {
+        if (err) {
+            handleError(err, res, 'Error creating event Entry.');
+            res.status(400);
+            return;
+        } else {
+            res.json(eventEntry);
+            res.status(201);
+        }
+    });
+    
 });
 
 module.exports = router;
