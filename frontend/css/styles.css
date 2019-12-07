@@ -1,11 +1,46 @@
-#banner {
+.banner {
     width: 100%;
     background-color: black;
     color: aqua;
     font-size: 100px;
     text-align: center;
     list-style: none;
-    font-family: "Times New Roman";
+    height: 150px;
+}
+
+.banner>a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navigation {
+    width: 100%;
+    background-color: black;
+    color: aqua;
+    font-size: 30px;
+    text-align: center;
+    list-style: none;
+    display: flex;
+    border-top: aqua 1px solid;
+    margin-top: 0px;
+}
+
+.navigation>li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    padding-left: 20px;
+    border-left: aqua 2px solid;
+}
+
+.navigation>li>a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.navigation>li>a:hover {
+    color: white;
 }
 
 body {
