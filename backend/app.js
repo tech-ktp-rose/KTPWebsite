@@ -5,6 +5,7 @@ const express = require('express');
 const bodyParser = require('body-parser'); 
 
 const textFieldRoutes = require('./routes/textFields');
+const EventEntryRoutes = require('./routes/eventEntries');
 
 //instantiate instance of express webserver
 const app = express();
@@ -42,6 +43,8 @@ app.get('/', (req, res) => {
 
 // Route traffic sent to /contacts to the mini app
 app.use('/textfields', textFieldRoutes);
+app.use('/eventEntries', EventEntryRoutes);
+
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
