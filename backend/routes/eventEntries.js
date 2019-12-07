@@ -47,6 +47,22 @@ router.route('/').get((req,res) => {
         }
     });
     
+})
+.delete((req, res) => {
+    EventEntry.remove({
+        name: req.body.name,
+        date: req.body.date,
+        description: req.body.description,
+        location: req.body.location
+    }, (err, eventEntry) => {
+        if (err) {
+            handleError(err, res, 'Error creating event Entry.');
+            res.status(400);
+        } else {
+            res.json(null);
+            res.status(204);
+        }
+    })
 });
 
 module.exports = router;
