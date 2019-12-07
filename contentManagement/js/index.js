@@ -88,6 +88,8 @@
         async: false,
         success: (events) => {
             if (events) {
+                console.log("Got events");
+                console.log(events);
                 $.each(events, addEvents);
             } else {
                 console.log("no events found")
@@ -100,25 +102,50 @@
 
     function addEvents() {
         const container = document.createElement("div");
-        containerDiv.class = "event";
+        container.classList.add("event");
 
         const name = document.createElement("h4");
-        name.text = this.name;
+        $(name).text(this.name);
         container.append(name);
 
         const location = document.createElement("p");
-        location.text = this.location;
+        $(location).text(this.location);
         container.append(location);
         
         const date = document.createElement("p");
-        date.text = this.date;
+        $(date).text(this.date);
         container.append(date);
 
         const description = document.createElement("p");
-        description.text = this.description;
+        $(description).text(this.description);
         container.append(description);
 
-        $("#currentEvents").append(container);
+        const deleteButton = document.createElement("input");
+        deleteButton.type = "button";
+        deleteButton.value = "delete";
+        $(deleteButton).on('click', deleteFunction(this.name, this.description, this.location, this.date));
+        container.append(deleteButton);
+
+        const currentEvents = document.getElementById("currentEvents");
+        currentEvents.append(container);
     }
 
+    function deleteFunction (eventName, desc, loc, eventDate) {
+        return function () {
+            $.ajax({
+                url:dataBaseURL + "eventEntries",
+                type: 'DELETE',
+                async: false,
+                dataType: 'JSON',
+                data: {
+                    name: eventName,
+                    description: desc,
+                    location: loc,
+                    date: eventDate
+                }
+            });
+
+            location.reload();
+        };
+    }
 })();

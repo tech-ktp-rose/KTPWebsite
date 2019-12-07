@@ -23,3 +23,16 @@ h1{
 .navigation>li {
     margin-right: 40px;
 }
+
+#currentEvents {
+    border: black 2px solid;
+    width: 700px;
+    height: 600px;
+    overflow-y: auto;
+}
+
+.event {
+    border: black 1px solid;
+    margin: 5px;
+    padding: 5px;
+}
