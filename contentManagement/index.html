@@ -3,8 +3,6 @@
     <head>
         <title>Home page - CMS</title>
         <link href="css/index.css" type="text/css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="js/index.js"></script>
     </head>
 
     <body>
@@ -17,10 +15,10 @@
         <h1>Home Page</h1>
         <div>
             <h3>Page Title:</h3>
-            <!-- <form id="pageTitle" class="forms" onsubmit="submitHomePageTitle();return false;"> -->
+            <form id="pageTitle" class="forms">
                 <input id="pageTitleField" type="text" name="pagetitle" value="">
                 <input id ="pageTitleSubmit" type="submit">
-            <!-- </form> -->
+            </form>
 
             <h3>Add a Photo:</h3>
             <form id="addPhoto" class="forms">
@@ -60,4 +58,7 @@
             </div>
         </div>  
     </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
 </html>
